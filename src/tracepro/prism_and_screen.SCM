@@ -79,12 +79,12 @@
     (define screen_y (+ face_center_y (* distance_from_face norm_y)))
     (define screen_z face_center_z)
     
-    ; Create screen as a cylinder (thin disk)
-    ; Parameters: type, radius1, radius2, height
-    ; Making it thin (height = 0.1) to act as a screen
+    ; Create screen as a thin cylinder (disk)
+    ; Parameters: length, base_major, [base_minor], [top_major]
+    ; Making it thin to act as a screen
     (define screen_thickness 0.1)
     (define screen_entity 
-      (insert:cylcone 1 screen_size screen_size screen_thickness))
+      (insert:cylcone screen_thickness screen_size screen_size screen_size))
     (property:apply-name screen_entity "screen")
     
     ; Calculate rotation to align screen with left face
@@ -95,18 +95,12 @@
     (define angle_xy (* (atan norm_y norm_x) (/ 180.0 pi)))
     
     ; Apply rotations using correct edit:rotate syntax
-    ; edit:rotate takes: entity, origin-position, axis-vector, angle-degrees
+    ; Syntax: (edit:rotate body xcenter ycenter zcenter xdir ydir zdir angle)
     ; First rotate 90° about Y-axis to point screen from Z to X direction
-    (edit:rotate screen_entity 
-      (position 0 0 0) 
-      (gvector 0 1 0) 
-      90.0)
+    (edit:rotate screen_entity 0 0 0 0 1 0 90.0)
     
     ; Then rotate about Z-axis to align with the exact face direction
-    (edit:rotate screen_entity 
-      (position 0 0 0) 
-      (gvector 0 0 1) 
-      angle_xy)
+    (edit:rotate screen_entity 0 0 0 0 0 1 angle_xy)
     
     ; Move screen to calculated position
     (edit:move screen_entity screen_x screen_y screen_z)
