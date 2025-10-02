@@ -1,0 +1,25 @@
+TracePro Material Property Data
+File Name	E:\TraceProData\tracepro.db
+TracePro Release: 7 3 4
+Database Version: 4 1 0
+Data generated at 15:30:00 October 02, 2025
+Name	CustomMaterial_1.33
+Catalog	User
+Description	Custom material with constant index 1.33
+MILSPEC	
+WaveStart	0.4
+WaveEnd	0.7
+Equation	1
+User_Data	2
+Coefficients	Bulk_is_Alpha
+0	0	0	0	0
+0	0	0	0	0
+Temperature	Wavelength	Index	Absorption
+293	0.4	1.33	0
+293	0.45	1.33	0
+293	0.5	1.33	0
+293	0.5461	1.33	0
+293	0.55	1.33	0
+293	0.6	1.33	0
+293	0.65	1.33	0
+293	0.7	1.33	0
