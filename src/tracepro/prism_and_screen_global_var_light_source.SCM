@@ -235,8 +235,8 @@
 (define SCREEN_DISTANCE 2.0)          ; Distance from left face to screen
 
 ; Light source parameters
-(define SOURCE_RADIUS 3.0)            ; Radius of the light source (Rs)
-(define SOURCE_ANGLE_EMISSION 10.0)   ; Half angle of emission in degrees
+(define SOURCE_RADIUS 1.5)            ; Radius of the light source (Rs)
+(define SOURCE_ANGLE_EMISSION 1.0)   ; Half angle of emission in degrees
 (define SOURCE_DISTANCE 2.0)          ; Distance from right face to source
 (define SOURCE_NUM_RAYS 1000)         ; Number of rays to trace
 (define SOURCE_FLUX 1000.0)           ; Total flux
