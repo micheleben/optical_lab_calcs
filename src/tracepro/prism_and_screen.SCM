@@ -1,3 +1,50 @@
+; TracePro Macro: Trapezoidal Prism with Positioned Screen
+; This macro creates an isosceles trapezoidal prism and positions a screen
+; parallel to the left side leg at a specified distance
+
+(define TrapezoidalPrismPar
+  (lambda (angle_deg long_base height extrusion_length)
+    ; Define pi constant
+    (define pi 3.14159265359)
+    
+    ; Convert angle from degrees to radians
+    (define angle_rad (* angle_deg (/ pi 180.0)))
+    
+    ; Calculate horizontal offset for each leg
+    (define offset (/ height (tan angle_rad)))
+    
+    ; Calculate z translation to center the prism
+    (define z_tran (- 0 (/ extrusion_length 2)))
+    
+    ; Calculate the four vertices of the isosceles trapezoid
+    (define v1 (position (/ (- 0 long_base) 2.0) 0.0 0.0))              ; Bottom left
+    (define v2 (position (/ long_base 2.0) 0.0 0.0))                     ; Bottom right
+    (define v3 (position (- (/ long_base 2.0) offset) height 0.0))      ; Top right
+    (define v4 (position (+ (/ (- 0 long_base) 2.0) offset) height 0.0)) ; Top left
+    
+    ; Create the thin sheet with the trapezoid profile
+    (define TRAP_SHEET 
+      (insert:thin-sheet "TrapezoidSheet" 
+        (list v1 v2 v3 v4)))
+    
+    ; Get the face to sweep
+    (define TRAP_FACE (car (entity:faces TRAP_SHEET)))
+    
+    ; Sweep along Z axis by extrusion_length
+    (edit:surface-sweep TRAP_FACE extrusion_length)
+    
+    ; Move to center the prism in Z
+    (edit:move TRAP_SHEET 0.000000 0.000000 z_tran)
+    
+    ; Apply name and material to the resulting solid
+    (property:apply-name TRAP_SHEET "TrapezoidalPrism")
+    (property:apply-material TRAP_SHEET "SCHOTT" "K7" (gvector 0 0 0))
+    
+    ; Return the entity
+    TRAP_SHEET
+    )
+  )
+
 (define TrapezoidalPrismWithScreen
   (lambda (angle_deg long_base height extrusion_length screen_size distance_from_face)
     ; Define pi constant
@@ -40,19 +87,26 @@
       (insert:cylcone 1 screen_size screen_size screen_thickness))
     (property:apply-name screen_entity "screen")
     
-    ; Calculate rotation angles to align screen with left face
+    ; Calculate rotation to align screen with left face
     ; The screen is initially created with axis along Z (face normal = +Z)
-    ; We need to rotate it so the face is perpendicular to (norm_x, norm_y, 0)
+    ; We need to rotate it so the face normal points in direction (norm_x, norm_y, 0)
     
-    ; Step 1: Rotate 90 degrees about Y to bring axis to X direction
-    ; Step 2: Rotate about Z to align with the exact direction
-    ; The angle in XY plane from -X axis is: atan2(norm_y, norm_x)
-    (define angle_from_neg_x (* (atan norm_y norm_x) (/ 180.0 pi)))
-    ; Adjust: we need angle from +X, and account for initial 90-deg Y rotation
-    (define rotation_z (- 180.0 angle_from_neg_x))
+    ; Calculate the angle in XY plane from +X axis
+    (define angle_xy (* (atan norm_y norm_x) (/ 180.0 pi)))
     
-    ; Apply rotations: first 90° about Y, then adjust with Z rotation
-    (edit:rotate screen_entity 0.0 90.0 rotation_z)
+    ; Apply rotations using correct edit:rotate syntax
+    ; edit:rotate takes: entity, origin-position, axis-vector, angle-degrees
+    ; First rotate 90° about Y-axis to point screen from Z to X direction
+    (edit:rotate screen_entity 
+      (position 0 0 0) 
+      (gvector 0 1 0) 
+      90.0)
+    
+    ; Then rotate about Z-axis to align with the exact face direction
+    (edit:rotate screen_entity 
+      (position 0 0 0) 
+      (gvector 0 0 1) 
+      angle_xy)
     
     ; Move screen to calculated position
     (edit:move screen_entity screen_x screen_y screen_z)
