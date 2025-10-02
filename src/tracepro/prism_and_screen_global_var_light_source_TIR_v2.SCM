@@ -238,7 +238,7 @@
     (define corner1 (position (- 0 x_half) (- 0 y_thickness) (- 0 z_half)))
     (define corner2 (position x_half 0.0 z_half))
     
-    (define para_block (insert:block corner1 corner2))
+    (define para_block (geometry:block corner1 corner2))
     
     ; Apply name
     (property:apply-name para_block "Parallelepiped")
@@ -269,8 +269,8 @@
 (define SCREEN_DISTANCE 2.0)          ; Distance from left face to screen
 
 ; Light source parameters
-(define SOURCE_RADIUS 1.5)            ; Radius of the light source (Rs)
-(define SOURCE_ANGLE_EMISSION 1.0)   ; Half angle of emission in degrees
+(define SOURCE_RADIUS 3.0)            ; Radius of the light source (Rs)
+(define SOURCE_ANGLE_EMISSION 10.0)   ; Half angle of emission in degrees
 (define SOURCE_DISTANCE 2.0)          ; Distance from right face to source
 (define SOURCE_NUM_RAYS 1000)         ; Number of rays to trace
 (define SOURCE_FLUX 1000.0)           ; Total flux
