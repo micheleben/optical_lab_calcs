@@ -1,7 +1,8 @@
 ;; ============================================================
-;; Script 1: Basic Importance Sampling for Scattering Surface
+;; Script 2: Basic Importance Sampling for Scattering Surface
 ;; Demonstrates: Creating a target and applying importance sampling
 ;; Reference: Presentation slides 31-36
+;; Version: v2 (Corrected property:apply-surface)
 ;; ============================================================
 
 (define setup-basic-importance-sampling
@@ -9,9 +10,9 @@
     
     ;; Create a simple optical system
     ;; Lens that scatters light toward a detector
-    (define lens (solid:sphere 10))
+    ;; FIXED v1: solid:sphere requires both center position and radius
+    (define lens (solid:sphere (position 0 0 0) 10))
     (property:apply-name lens "ScatteringLens")
-    (edit:move lens 0 0 0)
     
     ;; Create detector surface at distance
     (define detector (solid:block (position 40 -5 -5) (position 42 5 5)))
@@ -19,7 +20,9 @@
     
     ;; Apply scattering property to lens
     ;; This creates the scenario where we need importance sampling
-    (property:apply-surface-name (car (entity:faces lens)) "Default" "Lambertian_50%_Reflect")
+    ;; FIXED v2: Changed property:apply-surface-name to property:apply-surface
+    (property:apply-surface (car (entity:faces lens)) 
+      (list "Lambertian_50%_Reflect" "Default"))
     
     ;; Get the front face of the detector for targeting
     (define detector-face (car (entity:faces detector)))
