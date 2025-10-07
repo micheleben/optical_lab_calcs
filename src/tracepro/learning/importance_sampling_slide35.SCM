@@ -1,8 +1,8 @@
 ;; ============================================================
-;; Script 2: Basic Importance Sampling for Scattering Surface
+;; Script 3: Basic Importance Sampling for Scattering Surface
 ;; Demonstrates: Creating a target and applying importance sampling
 ;; Reference: Presentation slides 31-36
-;; Version: v2 (Corrected property:apply-surface)
+;; Version: v3 (Corrected property:apply-importance-target arguments)
 ;; ============================================================
 
 (define setup-basic-importance-sampling
@@ -34,24 +34,24 @@
     ;; ============================================================
     
     ;; Create importance sampling target at detector location
-    ;; Parameters from slide 35:
-    ;; - Rectangular target at detector position
-    ;; - Toward direction (rays aim at target)
-    ;; - 1 ray per scatter event to target
+    ;; FIXED v3: Corrected argument order and types
+    ;; Syntax: (property:apply-importance-target ent type direction samples 
+                 ;;          center normal up size1 size2 ndim1 ndim2)
+    ;; - type: "rect" for rectangular or "circ" for circular
+    ;; - direction: positive number for Toward, negative for Away
     
     (property:apply-importance-target 
       lens-scatter-face          ;; Surface to apply importance sampling
-      1                          ;; Target number
-      1                          ;; Rays per cell to target
-      "Toward"                   ;; Direction
-      "Rectangular"              ;; Shape
+      "rect"                     ;; Target type (rectangular)
+      1                          ;; Direction (positive = Toward)
+      1                          ;; Samples (rays per cell to target)
       (position 41 0 0)          ;; Target center (detector location)
       (gvector 1 0 0)            ;; Normal vector (pointing toward source)
       (gvector 0 1 0)            ;; Up vector
-      10                         ;; X width
-      10                         ;; Y width
-      1                          ;; X cells (for stratification)
-      1)                         ;; Y cells
+      10                         ;; size1 (X width in mm)
+      10                         ;; size2 (Y width in mm)
+      1                          ;; ndim1 (X cells for stratification)
+      1)                         ;; ndim2 (Y cells for stratification)
     
     ;; Enable importance sampling in raytrace options
     (raytrace:set-importance-sampling-on)
