@@ -1,8 +1,8 @@
 ;; ============================================================
-;; Script 3: Basic Importance Sampling for Scattering Surface
+;; Script 4: Basic Importance Sampling for Scattering Surface
 ;; Demonstrates: Creating a target and applying importance sampling
 ;; Reference: Presentation slides 31-36
-;; Version: v3 (Corrected property:apply-importance-target arguments)
+;; Version: v4 (Corrected grid source setup)
 ;; ============================================================
 
 (define setup-basic-importance-sampling
@@ -60,11 +60,22 @@
     ;; (from slide 22 - use 1e-6 for importance sampling)
     (raytrace:set-flux-threshold 1e-6)
     
-    ;; Create a simple grid source
+    ;; ============================================================
+    ;; GRID SOURCE SETUP
+    ;; FIXED v4: Corrected grid source functions
+    ;; ============================================================
+    
+    ;; Set grid origin (position of the grid)
     (raytrace:set-grid-origin (position -20 0 0))
-    (raytrace:set-grid-aim-point (position 0 0 0))
-    (raytrace:set-grid-x-points 5)
-    (raytrace:set-grid-y-points 5)
+    
+    ;; Set beam to converge to the lens center (aim point)
+    ;; This replaces the non-existent raytrace:set-grid-aim-point
+    (raytrace:set-beam-orientation-converge-to-point (position 0 0 0))
+    
+    ;; Set grid pattern to rectangular with 5x5 points and flux per ray of 1.0
+    ;; This replaces raytrace:set-grid-x-points and raytrace:set-grid-y-points
+    ;; Syntax: (raytrace:set-grid-pattern-rectangular y-points x-points flux)
+    (raytrace:set-grid-pattern-rectangular 5 5 1.0)
     
     (display "Importance sampling setup complete!")
     (newline)
