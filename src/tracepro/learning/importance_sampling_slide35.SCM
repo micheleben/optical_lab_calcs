@@ -1,8 +1,8 @@
 ;; ============================================================
-;; Script 4: Basic Importance Sampling for Scattering Surface
+;; Script 5: Basic Importance Sampling for Scattering Surface
 ;; Demonstrates: Creating a target and applying importance sampling
 ;; Reference: Presentation slides 31-36
-;; Version: v4 (Corrected grid source setup)
+;; Version: v5 (Added automatic raytrace execution)
 ;; ============================================================
 
 (define setup-basic-importance-sampling
@@ -79,7 +79,18 @@
     
     (display "Importance sampling setup complete!")
     (newline)
-    (display "Now trace with: (raytrace:all-sources)")
+    
+    ;; ============================================================
+    ;; EXECUTE RAYTRACE
+    ;; FIXED v5: Added automatic raytrace execution
+    ;; ============================================================
+    
+    (display "Starting raytrace...")
+    (newline)
+    (raytrace:all-sources)
+    (display "Raytrace complete!")
+    (newline)
+    (display "Check your model to see the importance sampled rays directed toward the detector.")
     (newline)
     ))
 
