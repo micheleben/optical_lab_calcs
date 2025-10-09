@@ -1,0 +1,140 @@
+2000 0 2 0           
+23 TracePro Expert - 7.3.4 14 ACIS 20.0.3 NT 24 Tue Oct 07 13:42:39 2025 
+1 9.9999999999999995e-007 1e-010 
+body $2 -1 -1 $-1 $3 $-1 $4 T -10 -10 -10 10 10 10 #
+body $5 -1 -1 $-1 $6 $-1 $7 T -1 -5 -5 1 5 5 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $8 $-1 $0 2 1 2 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @22 SYSTEM_TREE_NODE_INDEX 1 #
+lump $-1 -1 -1 $-1 $-1 $9 $0 T -10 -10 -10 10 10 10 #
+transform $-1 -1 1 0 0 0 1 0 0 0 1 0 0 0 1 no_rotate no_reflect no_shear #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $10 $-1 $1 2 1 2 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @22 SYSTEM_TREE_NODE_INDEX 2 #
+lump $-1 -1 -1 $-1 $-1 $11 $1 T -1 -5 -5 1 5 5 #
+transform $-1 -1 1 0 0 0 1 0 0 0 1 41 0 0 1 no_rotate no_reflect no_shear #
+wstring_attrib-name_attrib-gen-attrib $-1 -1 $12 $2 $0 2 1 2 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @16 LAM_MAT_PROPERTY @7 1V4VMG5 #
+shell $-1 -1 -1 $-1 $-1 $-1 $13 $-1 $3 T -10 -10 -10 10 10 10 #
+position_attrib-name_attrib-gen-attrib $-1 -1 $14 $5 $1 2 1 1 2 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @27 LAM_SURF_ORIGIN_POS_INDEX_0 0 0 0 #
+shell $-1 -1 -1 $-1 $-1 $-1 $15 $-1 $6 T -1 -5 -5 1 5 5 #
+wstring_attrib-name_attrib-gen-attrib $-1 -1 $16 $8 $0 2 1 2 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 LAM_MAT_CATALOG @12 1VNVJJP9KCP4 #
+face $17 -1 -1 $-1 $-1 $-1 $9 $-1 $18 forward single T -10 -10 -10 10 10 10 F #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $19 $10 $1 2 1 2 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @13 LAM_BODY_TNDX 0 #
+face $-1 -1 -1 $-1 $20 $21 $11 $-1 $22 forward single T -1 -5 5 1 5 5 F #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $23 $12 $0 2 1 2 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @13 LAM_BODY_TNDX 0 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $24 $-1 $13 2 3 2 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @27 LAM_IMPORT_TARGET_NDIM2_001 1 #
+sphere-surface $-1 -1 -1 $-1 0 0 0 10 1 0 0 0 0 1 forward_v I I I I #
+wstring_attrib-name_attrib-gen-attrib $-1 -1 $-1 $14 $1 2 1 2 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 LAM_ENTITY_NAME @15 1V6CUASMFEPWW69 #
+face $-1 -1 -1 $-1 $25 $26 $11 $-1 $27 reversed single T -1 -5 -5 1 5 -5 F #
+loop $-1 -1 -1 $-1 $-1 $28 $15 T -1 -5 5 1 5 5 unknown #
+plane-surface $-1 -1 -1 $-1 0 0 5 0 0 1 1 0 0 forward_v I I I I #
+wstring_attrib-name_attrib-gen-attrib $-1 -1 $-1 $16 $0 2 1 2 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 LAM_ENTITY_NAME @25 1VNVT48VKG7NXM8SYEECUXRU3 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $29 $17 $13 2 3 2 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @27 LAM_IMPORT_TARGET_NDIM1_001 1 #
+face $-1 -1 -1 $-1 $30 $31 $11 $-1 $32 reversed single T -1 -5 -5 1 -5 5 F #
+loop $-1 -1 -1 $-1 $-1 $33 $20 T -1 -5 -5 1 5 -5 unknown #
+plane-surface $-1 -1 -1 $-1 0 0 -5 0 0 1 1 0 0 forward_v I I I I #
+coedge $-1 -1 -1 $-1 $34 $35 $36 $37 forward $21 $-1 #
+real_attrib-name_attrib-gen-attrib $-1 -1 $38 $24 $13 2 3 2 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @27 LAM_IMPORT_TARGET_SIZE2_001 10 #
+face $39 -1 -1 $-1 $40 $41 $11 $-1 $42 reversed single T -1 -5 -5 -1 5 5 F #
+loop $-1 -1 -1 $-1 $-1 $43 $25 T -1 -5 -5 1 -5 5 unknown #
+plane-surface $-1 -1 -1 $-1 0 -5 0 0 1 -0 -0 0 1 forward_v I I I I #
+coedge $-1 -1 -1 $-1 $44 $45 $46 $47 forward $26 $-1 #
+coedge $-1 -1 -1 $-1 $48 $28 $49 $50 forward $21 $-1 #
+coedge $-1 -1 -1 $-1 $28 $48 $51 $52 forward $21 $-1 #
+coedge $-1 -1 -1 $-1 $53 $54 $28 $37 reversed $55 $-1 #
+edge $-1 -1 -1 $-1 $56 -5 $57 5 $36 $58 forward @7 unknown T 1 -5 5 1 5 5 #
+real_attrib-name_attrib-gen-attrib $-1 -1 $59 $29 $13 2 3 2 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @27 LAM_IMPORT_TARGET_SIZE1_001 10 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $60 $-1 $30 2 3 2 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @27 LAM_IMPORT_TARGET_NDIM2_001 1 #
+face $-1 -1 -1 $-1 $61 $62 $11 $-1 $63 reversed single T -1 5 -5 1 5 5 F #
+loop $-1 -1 -1 $-1 $-1 $64 $30 T -1 -5 -5 -1 5 5 unknown #
+plane-surface $-1 -1 -1 $-1 -1 0 0 1 0 0 0 0 -1 forward_v I I I I #
+coedge $-1 -1 -1 $-1 $65 $51 $66 $67 forward $31 $-1 #
+coedge $-1 -1 -1 $-1 $68 $33 $65 $69 forward $26 $-1 #
+coedge $-1 -1 -1 $-1 $33 $68 $70 $71 forward $26 $-1 #
+coedge $-1 -1 -1 $-1 $54 $53 $33 $47 reversed $55 $-1 #
+edge $-1 -1 -1 $-1 $72 -5 $73 5 $46 $74 forward @7 unknown T 1 -5 -5 1 5 -5 #
+coedge $-1 -1 -1 $-1 $35 $34 $75 $76 forward $21 $-1 #
+coedge $-1 -1 -1 $-1 $77 $78 $34 $50 reversed $62 $-1 #
+edge $-1 -1 -1 $-1 $57 -1 $79 1 $49 $80 forward @7 unknown T -1 5 5 1 5 5 #
+coedge $-1 -1 -1 $-1 $43 $81 $35 $52 reversed $31 $-1 #
+edge $-1 -1 -1 $-1 $82 -1 $56 1 $51 $83 forward @7 unknown T -1 -5 5 1 -5 5 #
+coedge $-1 -1 -1 $-1 $46 $36 $81 $84 forward $55 $-1 #
+coedge $-1 -1 -1 $-1 $36 $46 $77 $85 reversed $55 $-1 #
+loop $-1 -1 -1 $-1 $-1 $53 $61 T 1 -5 -5 1 5 5 unknown #
+vertex $-1 -1 -1 $-1 $37 $86 #
+vertex $-1 -1 -1 $-1 $37 $87 #
+straight-curve $-1 -1 -1 $-1 1 0 5 0 1 0 I I #
+vector_attrib-name_attrib-gen-attrib $-1 -1 $88 $38 $13 2 3 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @24 LAM_IMPORT_TARGET_UP_001 0 1 0 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $89 $39 $30 2 3 2 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @27 LAM_IMPORT_TARGET_NDIM1_001 1 #
+face $-1 -1 -1 $-1 $-1 $55 $11 $-1 $90 reversed single T 1 -5 -5 1 5 5 F #
+loop $-1 -1 -1 $-1 $-1 $77 $40 T -1 5 -5 1 5 5 unknown #
+plane-surface $-1 -1 -1 $-1 0 5 0 0 -1 0 0 0 -1 forward_v I I I I #
+coedge $-1 -1 -1 $-1 $91 $75 $78 $92 forward $41 $-1 #
+coedge $-1 -1 -1 $-1 $81 $43 $44 $69 reversed $31 $-1 #
+coedge $-1 -1 -1 $-1 $75 $91 $43 $67 reversed $41 $-1 #
+edge $-1 -1 -1 $-1 $82 -5 $93 5 $66 $94 forward @7 unknown T -1 -5 -5 -1 -5 5 #
+coedge $-1 -1 -1 $-1 $45 $44 $91 $95 forward $26 $-1 #
+edge $-1 -1 -1 $-1 $73 -1 $93 1 $65 $96 forward @7 unknown T -1 -5 -5 1 -5 -5 #
+coedge $-1 -1 -1 $-1 $78 $77 $45 $71 reversed $62 $-1 #
+edge $-1 -1 -1 $-1 $97 -1 $72 1 $70 $98 forward @7 unknown T -1 5 -5 1 5 -5 #
+vertex $-1 -1 -1 $-1 $47 $99 #
+vertex $-1 -1 -1 $-1 $84 $100 #
+straight-curve $-1 -1 -1 $-1 1 0 -5 0 -1 0 I I #
+coedge $-1 -1 -1 $-1 $64 $66 $48 $76 reversed $41 $-1 #
+edge $-1 -1 -1 $-1 $79 -5 $82 5 $75 $101 forward @7 unknown T -1 -5 5 -1 5 5 #
+coedge $-1 -1 -1 $-1 $70 $49 $54 $85 forward $62 $-1 #
+coedge $-1 -1 -1 $-1 $49 $70 $64 $92 reversed $62 $-1 #
+vertex $-1 -1 -1 $-1 $50 $102 #
+straight-curve $-1 -1 -1 $-1 0 5 5 -1 0 0 I I #
+coedge $-1 -1 -1 $-1 $51 $65 $53 $84 reversed $31 $-1 #
+vertex $-1 -1 -1 $-1 $76 $103 #
+straight-curve $-1 -1 -1 $-1 0 -5 5 1 0 0 I I #
+edge $-1 -1 -1 $-1 $56 -5 $73 5 $53 $104 forward @7 unknown T 1 -5 -5 1 -5 5 #
+edge $-1 -1 -1 $-1 $57 -5 $72 5 $54 $105 forward @7 unknown T 1 5 -5 1 5 5 #
+point $-1 -1 -1 $-1 1 -5 5 #
+point $-1 -1 -1 $-1 1 5 5 #
+vector_attrib-name_attrib-gen-attrib $-1 -1 $106 $59 $13 2 3 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @28 LAM_IMPORT_TARGET_NORMAL_001 1 0 0 #
+real_attrib-name_attrib-gen-attrib $-1 -1 $107 $60 $30 2 3 2 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @27 LAM_IMPORT_TARGET_SIZE2_001 0 #
+plane-surface $-1 -1 -1 $-1 1 0 0 -1 0 0 0 -0 1 forward_v I I I I #
+coedge $-1 -1 -1 $-1 $66 $64 $68 $95 reversed $41 $-1 #
+edge $-1 -1 -1 $-1 $79 -5 $97 5 $78 $108 forward @7 unknown T -1 5 -5 -1 5 5 #
+vertex $-1 -1 -1 $-1 $95 $109 #
+straight-curve $-1 -1 -1 $-1 -1 -5 0 0 0 -1 I I #
+edge $-1 -1 -1 $-1 $93 -5 $97 5 $91 $110 forward @7 unknown T -1 -5 -5 -1 5 -5 #
+straight-curve $-1 -1 -1 $-1 0 -5 -5 -1 0 0 I I #
+vertex $-1 -1 -1 $-1 $71 $111 #
+straight-curve $-1 -1 -1 $-1 0 5 -5 1 0 0 I I #
+point $-1 -1 -1 $-1 1 5 -5 #
+point $-1 -1 -1 $-1 1 -5 -5 #
+straight-curve $-1 -1 -1 $-1 -1 0 5 0 -1 0 I I #
+point $-1 -1 -1 $-1 -1 5 5 #
+point $-1 -1 -1 $-1 -1 -5 5 #
+straight-curve $-1 -1 -1 $-1 1 -5 0 0 0 -1 I I #
+straight-curve $-1 -1 -1 $-1 1 5 0 0 0 -1 I I #
+position_attrib-name_attrib-gen-attrib $-1 -1 $112 $88 $13 2 3 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @28 LAM_IMPORT_TARGET_CENTER_001 41 0 0 #
+real_attrib-name_attrib-gen-attrib $-1 -1 $113 $89 $30 2 3 2 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @27 LAM_IMPORT_TARGET_SIZE1_001 5 #
+straight-curve $-1 -1 -1 $-1 -1 5 0 0 0 -1 I I #
+point $-1 -1 -1 $-1 -1 -5 -5 #
+straight-curve $-1 -1 -1 $-1 -1 0 -5 0 1 0 I I #
+point $-1 -1 -1 $-1 -1 5 -5 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $114 $106 $13 2 3 2 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @31 LAM_IMPORT_TARGET_DIRECTION_001 0 #
+vector_attrib-name_attrib-gen-attrib $-1 -1 $115 $107 $30 2 3 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @24 LAM_IMPORT_TARGET_UP_001 0 0 1 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $116 $112 $13 2 3 2 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @29 LAM_IMPORT_TARGET_SAMPLES_001 1 #
+vector_attrib-name_attrib-gen-attrib $-1 -1 $117 $113 $30 2 3 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @28 LAM_IMPORT_TARGET_NORMAL_001 1 0 0 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $118 $114 $13 2 3 2 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @26 LAM_IMPORT_TARGET_TYPE_001 1 #
+position_attrib-name_attrib-gen-attrib $-1 -1 $119 $115 $30 2 3 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @28 LAM_IMPORT_TARGET_CENTER_001 41 0 0 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $120 $116 $13 2 3 2 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @18 LAM_IMPORT_TARGETS 1 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $121 $117 $30 2 3 2 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @31 LAM_IMPORT_TARGET_DIRECTION_001 0 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $-1 $118 $13 2 3 2 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @13 LAM_FACE_TNDX 0 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $122 $119 $30 2 3 2 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @29 LAM_IMPORT_TARGET_SAMPLES_001 1 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $123 $121 $30 2 3 2 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @26 LAM_IMPORT_TARGET_TYPE_001 0 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $124 $122 $30 2 3 2 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @18 LAM_IMPORT_TARGETS 1 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $125 $123 $30 2 3 2 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @13 LAM_FACE_TNDX 0 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $126 $124 $30 2 3 2 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @19 LAM_SURF_FIXED_AXIS 0 #
+real_attrib-name_attrib-gen-attrib $-1 -1 $127 $125 $30 2 3 2 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @21 LAM_SURF_PROPERTY_REF 1 #
+wstring_attrib-name_attrib-gen-attrib $-1 -1 $128 $126 $30 2 3 2 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @17 LAM_SURF_PROPERTY @28 1VJCU69NQE55Y2M2BENWW69KQEM5 #
+wstring_attrib-name_attrib-gen-attrib $-1 -1 $129 $127 $30 2 3 2 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @25 LAM_SURF_PROPERTY_CATALOG @13 1V6CUERJQGE5Y #
+wstring_attrib-name_attrib-gen-attrib $-1 -1 $-1 $128 $30 2 3 2 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @27 LAM_SURF_COATING_USER_PARAM @2 1V #
+End-of-ACIS-data 
+TracePro Notes
+
+End Notes
+TracePro XML Begin
+<TraceProParams><Model>C:\Users\admin\working_dir\github\optical_lab_calcs\src\tracepro\oml_files\importance_sampling_slide35.OML</Model><CreatedBy>admin</CreatedBy><CreateTime>Tue Oct 07 13:42:39 2025</CreateTime><TraceProVersion>7.3.4</TraceProVersion><x64Version>1</x64Version><MSXMLVersion>3.0</MSXMLVersion><TraceProXMLVersion>11</TraceProXMLVersion><TraceProParameters><GridSources><GridSource><Name>Grid Source 1</Name><Excluded>0</Excluded><Flux>80</Flux><RayColor>255</RayColor><Units>0</Units><TotalRays>80</TotalRays><DiscreteFlag>1</DiscreteFlag><Wavelengths><Wavelength>0.5461</Wavelength><WavelengthTo>-1</WavelengthTo><NumberInc>1</NumberInc><Weight>1</Weight><Flux>80</Flux><RayCount>80</RayCount><TraceThisFlag>1</TraceThisFlag></Wavelengths><Shape>0</Shape><Pattern>1</Pattern><FluxType>0</FluxType><Orientation>0</Orientation><HalfWidth>0</HalfWidth><HalfHeight>10</HalfHeight><WidthPnts>10</WidthPnts><HeightPnts>10</HeightPnts><WidthInnerPnts>0</WidthInnerPnts><HeightInnerPnts>0</HeightInnerPnts><RandomSeed>1</RandomSeed><CenterPos><X>-20</X><Y>0</Y><Z>0</Z></CenterPos><NormalVec><X>1</X><Y>0</Y><Z>0</Z></NormalVec><UpVec><X>0</X><Y>1</Y><Z>0</Z></UpVec><BeamOrientaion>0</BeamOrientaion><BeamSpatialShape>0</BeamSpatialShape><BeamAngularShape>0</BeamAngularShape><BeamSpatialWeight>0</BeamSpatialWeight><BeamAngularWeight>0</BeamAngularWeight><BeamNormal><X>0</X><Y>0</Y><Z>0</Z></BeamNormal><BeamUp><X>0</X><Y>1</Y><Z>0</Z></BeamUp><BeamWaistX>1</BeamWaistX><BeamWaistY>1</BeamWaistY><BeamHalfAngleX>0</BeamHalfAngleX><BeamHalfAngleY>0</BeamHalfAngleY><PolarType>0</PolarType><PolarMethod>0</PolarMethod><DegreeOfPolar>1</DegreeOfPolar><Stokes><S0>1</S0><S1>0</S1><S2>0</S2><S3>0</S3><SX>1</SX><SY>0</SY><SZ>0</SZ></Stokes></GridSource></GridSources><FileSources/><SurfaceSources/><Calculations><CalculationData><Name>Radiance 1</Name><TargetCenterPos><X>0</X><Y>0</Y><Z>0</Z></TargetCenterPos><EyePosition><X>0</X><Y>0</Y><Z>100</Z></EyePosition><UpVector><X>0</X><Y>1</Y><Z>0</Z></UpVector><Width>20</Width><Height>20</Height><PixelWidth>2</PixelWidth><WidthGrid>10</WidthGrid><HeightGrid>10</HeightGrid><ImageQuality>0</ImageQuality><MinRays>100</MinRays><MaxRays>100</MaxRays><ColorScheme>0</ColorScheme><MapUnits>0</MapUnits><UseImpSampling>0</UseImpSampling><ExcludeFlag>0</ExcludeFlag><Color>255</Color></CalculationData></Calculations><RaytraceParams><FluxThreshold>1e-006</FluxThreshold><TotalIntercepts>1000</TotalIntercepts><TotalScatters>1000</TotalScatters><RandomScatters>1000</RandomScatters><OpticalScatters>1000</OpticalScatters><RadiometricUnits>0</RadiometricUnits><RaytraceImportance>1</RaytraceImportance><RaytracePolarization>0</RaytracePolarization><RaytraceSplitting>1</RaytraceSplitting><RaytraceQuickTrace>0</RaytraceQuickTrace><RaytraceSpecularTrace>0</RaytraceSpecularTrace><RaytraceDetectRay>0</RaytraceDetectRay><RaytraceRandomRays>1</RaytraceRandomRays><RaytraceRandomSeed>1</RaytraceRandomSeed><RaytraceDiffraction>0</RaytraceDiffraction><RaytraceDiffDistance>1000000</RaytraceDiffDistance><RaytraceSpeedMode>1</RaytraceSpeedMode><RaytraceMaxVoxels>32000</RaytraceMaxVoxels><RaytraceGrinSubstepTol>6</RaytraceGrinSubstepTol><RaytraceVoxelizationType>0</RaytraceVoxelizationType><RaytraceOctreeMaxTreeDepth>4</RaytraceOctreeMaxTreeDepth><RaytraceOctreeOptimalEdgesInVoxel>0</RaytraceOctreeOptimalEdgesInVoxel><RaytraceOctreeOptimalFacesInVoxel>5</RaytraceOctreeOptimalFacesInVoxel><FluorescenceFlag>0</FluorescenceFlag><FluorescenceType>0</FluorescenceType><FluorescenceInsertSource>0</FluorescenceInsertSource><ElapsedTime><Days>0</Days><TotalHours>0</TotalHours><Minutes>0</Minutes><Seconds>1</Seconds></ElapsedTime><SimulationMode>0</SimulationMode><ExitSurfaceData>1</ExitSurfaceData><CandelaData>0</CandelaData><UseSimDataFiles>1</UseSimDataFiles><ExitHistoryFile>0</ExitHistoryFile><ExitScatterFile>0</ExitScatterFile><SavePathSortData>0</SavePathSortData><DefaultTemperature>298.15</DefaultTemperature><RayColorType>0</RayColorType><ModelUnits>millimeters</ModelUnits><AutoUpdateMap>1</AutoUpdateMap><RayFilename></RayFilename><SimulationIndexFilename>Untitled7.ndx</SimulationIndexFilename></RaytraceParams><IrradianceMapParams><NormalVec><X>-1</X><Y>0</Y><Z>0</Z></NormalVec><UpVec><X>0</X><Y>0</Y><Z>-1</Z></UpVec><Smooth>0</Smooth><Log>0</Log><AutoCalc>1</AutoCalc><Contour>0</Contour><NormalizeEmitted>0</NormalizeEmitted><Type>0</Type><MapColor>0</MapColor><GradientDisplay>0</GradientDisplay><Profiles>0</Profiles><AutoLevels>1</AutoLevels><UsePercent>0</UsePercent><FootDisplay>0</FootDisplay><_3DMap>0</_3DMap><Local>0</Local><Buckets>50</Buckets><Rays>0</Rays><NumContours>15</NumContours><Symmetry>0</Symmetry><FFTsize>128</FFTsize><ViewMax>0</ViewMax><ViewMin>0</ViewMin><Max>0</Max><Min>0</Min><ViewNumber>0</ViewNumber><RadHalfAngle>10</RadHalfAngle></IrradianceMapParams><_3DIrradianceMapParams><DataType>0</DataType><DataRays>0</DataRays><DataSetMax>0</DataSetMax><DataUserMax>0</DataUserMax><NormalizeTo>0</NormalizeTo><DataSetMin>0</DataSetMin><DataUserMin>0</DataUserMin><Smoothing>0</Smoothing><ContourPlot>0</ContourPlot><PixelEdges>0</PixelEdges><GradientDisplay>0</GradientDisplay><LogScale>0</LogScale><LightingOn>0</LightingOn><ObjectTransparency>0</ObjectTransparency><NoPixels>50</NoPixels><ColorMap>1</ColorMap><AutoLevels>1</AutoLevels><NumberContours>15</NumberContours><UsePercent>0</UsePercent><SetNumber>0</SetNumber></_3DIrradianceMapParams><PolarizationMapParams><NormalVec><X>0</X><Y>0</Y><Z>1</Z></NormalVec><UpVec><X>0</X><Y>1</Y><Z>0</Z></UpVec><AutoCalc>0</AutoCalc><MapColor>0</MapColor><GradientDisplay>0</GradientDisplay><Buckets>11</Buckets><RayType>0</RayType><DOP_Low>0</DOP_Low><DOP_High>1</DOP_High></PolarizationMapParams><CandelaMapParams><NormalVec><X>0</X><Y>-1</Y><Z>0</Z></NormalVec><UpVec><X>0</X><Y>0</Y><Z>1</Z></UpVec><RaySelectType>0</RaySelectType><CandelaAngularWidth>90</CandelaAngularWidth><CandDistLumianireWidth>120</CandDistLumianireWidth><CandDistPolarWidth>90</CandDistPolarWidth><CandDistRectangularWidth>90</CandDistRectangularWidth><CandelaSymmetry>0</CandelaSymmetry><CandXYWidth>10</CandXYWidth><CandXYHeight>10</CandXYHeight><CandXYOrientation>0</CandXYOrientation><CandelaSmoothFactor>90</CandelaSmoothFactor><CandXYSmoothFactor>90</CandXYSmoothFactor><CandDistSmooth>0</CandDistSmooth><CandDistVerticalAng>90</CandDistVerticalAng><CandDistHorizontalAng>4</CandDistHorizontalAng><CandelaContour>0</CandelaContour><CandelaSmooth>0</CandelaSmooth><CandXYSmooth>0</CandXYSmooth><CandXYContour>0</CandXYContour><CandelaColor>0</CandelaColor><CandelaNumContours>10</CandelaNumContours><CandXYColor>0</CandXYColor><CandXYNumContours>10</CandXYNumContours><CandDistLuminaire>0</CandDistLuminaire><AutoLevels>1</AutoLevels><AutoLevelsXY>1</AutoLevelsXY><CandDistCdKLum>0</CandDistCdKLum><CandelaLog>0</CandelaLog><CandelaMax>0</CandelaMax><CandelaMin>0</CandelaMin><CandXYLog>0</CandXYLog><CandXYMax>0</CandXYMax><CandXYMin>0</CandXYMin><CandDistLogPolar>0</CandDistLogPolar><CandDistLogRect>0</CandDistLogRect><CandDistMax>0</CandDistMax><CandDistMin>0</CandDistMin><CandelaNumber>0</CandelaNumber><CandXYNumber>0</CandXYNumber><CandXYProfiles>0</CandXYProfiles><CandXY3DPlot>0</CandXY3DPlot><CandelaMaxCD>0</CandelaMaxCD><CandelaMinCD>0</CandelaMinCD><CandXYMaxCD>0</CandXYMaxCD><CandXYMinCD>0</CandXYMinCD><CandDistMaxCD>0</CandDistMaxCD><CandDistMinCD>0</CandDistMinCD></CandelaMapParams><CandelaIESParams><PhotometricType>0</PhotometricType><VerticalAngle>19</VerticalAngle><NoLamps>1</NoLamps><Multiplier>1</Multiplier><HorizontalType>0</HorizontalType><VerticalType>0</VerticalType><NoDecimal>6</NoDecimal><DimWidth>0</DimWidth><DimHeight>0</DimHeight><DimLength>0</DimLength><DimUnit>0</DimUnit></CandelaIESParams><VolumeFluxParams><Position_1><X>0</X><Y>0</Y><Z>0</Z></Position_1><Position_2><X>0</X><Y>0</Y><Z>0</Z></Position_2><NumCells_X>0</NumCells_X><NumCells_Y>0</NumCells_Y><NumCells_Z>0</NumCells_Z><ResultsFile></ResultsFile></VolumeFluxParams><NamedViewsParams/><RayColorsParams><RayColors_OneColor>0</RayColors_OneColor><PaletteIndex>0</PaletteIndex></RayColorsParams><OPLPlotParams><PlotType>0</PlotType><PlotRays>0</PlotRays><Normalization>0</Normalization><Smooth>0</Smooth><LogScale>0</LogScale><LengthUnits>0</LengthUnits><TimeUnits>0</TimeUnits><MinLength>0</MinLength><MaxLength>1</MaxLength><LengthIncrement>0.1</LengthIncrement><SmoothFactor>10</SmoothFactor></OPLPlotParams></TraceProParameters></TraceProParams>
+TracePro XML End

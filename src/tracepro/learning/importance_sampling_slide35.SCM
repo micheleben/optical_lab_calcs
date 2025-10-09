@@ -1,8 +1,8 @@
 ;; ============================================================
-;; Script 5: Basic Importance Sampling for Scattering Surface
+;; Script 6: Basic Importance Sampling for Scattering Surface
 ;; Demonstrates: Creating a target and applying importance sampling
 ;; Reference: Presentation slides 31-36
-;; Version: v5 (Added automatic raytrace execution)
+;; Version: v6 (Fixed surface property and enabled grid source)
 ;; ============================================================
 
 (define setup-basic-importance-sampling
@@ -14,15 +14,21 @@
     (define lens (solid:sphere (position 0 0 0) 10))
     (property:apply-name lens "ScatteringLens")
     
+    ;; FIXED v6: Apply material property (BK7 glass) to the lens
+    (property:apply-material lens "Schott" "BK7")
+    
     ;; Create detector surface at distance
     (define detector (solid:block (position 40 -5 -5) (position 42 5 5)))
     (property:apply-name detector "Detector")
     
+    ;; Apply perfect absorber to detector to see where rays hit
+    (property:apply-surface detector "Perfect Absorber")
+    
     ;; Apply scattering property to lens
     ;; This creates the scenario where we need importance sampling
     ;; FIXED v2: Changed property:apply-surface-name to property:apply-surface
-    (property:apply-surface (car (entity:faces lens)) 
-      (list "Lambertian_50%_Reflect" "Default"))
+    ;; FIXED v6: Changed to "Diffuse White" which exists in Default catalog
+    (property:apply-surface (car (entity:faces lens)) "Diffuse White")
     
     ;; Get the front face of the detector for targeting
     (define detector-face (car (entity:faces detector)))
@@ -76,6 +82,12 @@
     ;; This replaces raytrace:set-grid-x-points and raytrace:set-grid-y-points
     ;; Syntax: (raytrace:set-grid-pattern-rectangular y-points x-points flux)
     (raytrace:set-grid-pattern-rectangular 5 5 1.0)
+    
+    ;; FIXED v6: Enable the grid source for raytracing
+    ;; Syntax: (raytrace:set-grid-source-flag [name|index] bool)
+    ;; #t = included, #f = excluded
+    ;; This applies to "Grid Source 1" (the default grid source)
+    (raytrace:set-grid-source-flag "Grid Source 1" #t)
     
     (display "Importance sampling setup complete!")
     (newline)
